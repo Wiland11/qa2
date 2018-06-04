@@ -12,7 +12,7 @@ public class findELEMENT {
     private final String HOME_PAGE = "http:/javaguru.lv";
     private final By ELEMENT =By.id("12345");
     private final By CLASS_NAME = By.className("logo");
-    private final By NAME = By.name("asdda");
+ //   private final By NAME = By.name("asdda");
     
 
             @Test
@@ -23,9 +23,9 @@ public class findELEMENT {
 
                 WebElement classElement = driver.findElement(CLASS_NAME);
 
-                List<WebElement> classElements = driver.findElements(CLASS_ELEMENTS);
+ //               List<WebElement> classElements = driver.findElements(CLASS_ELEMENTS);
 
                 WebElement webElement = driver.findElement(ELEMENT);
                 webElement.click();
-                webElement.sendKeys(..charSequenses:"Test");
+                webElement.sendKeys();
             }}
