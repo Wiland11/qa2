@@ -1,13 +1,16 @@
 package homeWorkOne;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.sql.Driver;
+
 public class openDelfi {
-    private final String ARTICLE = "Сейм окончательно отклонил идею Шадурскиса о начале учебы с 6 лет";
+    private final String ARTICLE = "Страны G7 объявили о создании механизма защиты от российской пропаганды";
 
     @Test
     public void openDelfiSite () {
@@ -19,8 +22,16 @@ public class openDelfi {
 //        WebElement searchBox = driver.findElement(By.name("q"));
 //        searchBox.sendKeys(ARTICLE);
 //        searchBox.submit();
+//
+//        driver.findElement(By.name(ARTICLE));
+//
+//        Assert.assertTrue("Article find", driver.findElement(By.name(ARTICLE))= ARTICLE);
+//        Assert.assertEquals( ARTICLE, driver.findElements(By.name(ARTICLE)));
 
-        driver.findElement(By.name(ARTICLE));
+        driver.findElement(By.className(ARTICLE)).click();
+        Assert.assertEquals("asd", ARTICLE, driver.getTitle());
+
+//        driver.findElement(By.)
 
     }
 }
