@@ -22,13 +22,13 @@ public class openDelfi {
         driver.findElement(By.linkText(ARTICLE)).click();
 
 // Почему не работает?
-        StringBuilder buffer = new StringBuilder().append(ARTICLE).append(" - DELFI");
-        StringBuilder title = new StringBuilder(driver.getTitle());
-        Assert.assertEquals("Статься не найдена!", buffer,title);
+//        StringBuilder buffer = new StringBuilder().append(ARTICLE).append(" - DELFI");
+//        StringBuilder title = new StringBuilder(driver.getTitle());
+        Assert.assertEquals("Статься не найдена!", ARTICLE + " - DELFI", driver.getTitle());
 //???
 
 //        StringBuilder buffer = new StringBuilder().append(ARTICLE).append(" - DELFI");
-//        Assert.assertEquals("Статься не найдена", buffer, driver.getTitle());
+//        Assert.assertEquals("Статься не найдена", ARTICLE, driver.getTitle());
 
     }
 }
