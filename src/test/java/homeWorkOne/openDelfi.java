@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.sql.Driver;
 
 public class openDelfi {
-    private final String ARTICLE = "Страны G7 объявили о создании механизма защиты от российской пропаганды";
+    private final String ARTICLE = "Впервые в истории: Трамп отозвал свою подпись под итоговым заявлением G7";
 
     @Test
     public void openDelfiSite () {
@@ -19,19 +19,16 @@ public class openDelfi {
         driver.manage().window().maximize();
         driver.get("http://www.delfi.ru/");
 
-//        WebElement searchBox = driver.findElement(By.name("q"));
-//        searchBox.sendKeys(ARTICLE);
-//        searchBox.submit();
-//
-//        driver.findElement(By.name(ARTICLE));
-//
-//        Assert.assertTrue("Article find", driver.findElement(By.name(ARTICLE))= ARTICLE);
-//        Assert.assertEquals( ARTICLE, driver.findElements(By.name(ARTICLE)));
+        driver.findElement(By.linkText(ARTICLE)).click();
 
-        driver.findElement(By.className(ARTICLE)).click();
-        Assert.assertEquals("asd", ARTICLE, driver.getTitle());
+// Почему не работает?
+//        StringBuilder buffer = new StringBuilder().append(ARTICLE).append(" - DELFI");
+//        StringBuilder title = new StringBuilder(driver.getTitle());
+//        Assert.assertEquals("Статься найдена!", buffer,title);
+//???
 
-//        driver.findElement(By.)
+        StringBuilder buffer = new StringBuilder().append(ARTICLE).append(" - DELFI");
+        Assert.assertEquals("Статься найдена", buffer, driver.getTitle());
 
     }
 }
